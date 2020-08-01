@@ -16,6 +16,10 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
+// Example route
 Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
+
+Route.post('/users', 'UserController.create');
+Route.post('/sessions', 'SessionController.create');
